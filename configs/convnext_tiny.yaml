@@ -1,0 +1,64 @@
+# ConvNeXt-Tiny Training Configuration
+# For earthquake precursor detection
+
+# Model
+model:
+  variant: tiny
+  pretrained: true
+  dropout: 0.5
+  num_mag_classes: 4
+  num_azi_classes: 9
+
+# Data
+data:
+  data_dir: data/spectrograms
+  metadata: data/metadata/metadata.csv
+  image_size: 224
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+# Training
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 1.0e-4
+  weight_decay: 0.05
+  warmup_epochs: 5
+  early_stopping_patience: 10
+  gradient_clip: 1.0
+
+# Scheduler
+scheduler:
+  type: cosine
+  min_lr: 1.0e-6
+
+# Loss
+loss:
+  mag_weight: 1.0
+  azi_weight: 0.5
+  use_focal: false
+  focal_gamma: 2.0
+  label_smoothing: 0.0
+
+# Augmentation
+augmentation:
+  enabled: true
+  horizontal_flip: 0.5
+  rotation: 15
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.1
+  random_erasing: 0.1
+
+# Output
+output:
+  dir: experiments
+  save_best_only: true
+  log_interval: 10
+
+# Misc
+seed: 42
+num_workers: 4
+pin_memory: true

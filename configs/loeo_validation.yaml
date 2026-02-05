@@ -1,0 +1,48 @@
+# Leave-One-Event-Out (LOEO) Cross-Validation Configuration
+
+# Model
+model:
+  variant: tiny
+  pretrained: true
+  dropout: 0.5
+
+# Data
+data:
+  data_dir: data/spectrograms
+  metadata: data/metadata/metadata.csv
+  image_size: 224
+  event_column: event_id  # Column containing earthquake event IDs
+
+# Cross-validation
+cross_validation:
+  n_folds: 10
+  stratify_by: magnitude_class
+
+# Training (per fold)
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 1.0e-4
+  weight_decay: 0.05
+  early_stopping_patience: 3
+
+# Loss
+loss:
+  mag_weight: 1.0
+  azi_weight: 0.5
+
+# Augmentation
+augmentation:
+  enabled: true
+  horizontal_flip: 0.5
+  rotation: 15
+
+# Output
+output:
+  dir: loeo_results
+  save_fold_models: true
+  save_predictions: true
+
+# Misc
+seed: 42
+num_workers: 4
