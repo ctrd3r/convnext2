@@ -18,13 +18,13 @@ from tqdm import tqdm
 # Model URLs (replace with actual URLs when hosting)
 MODEL_URLS = {
     'convnext_loeo_best': {
-        'url': 'https://github.com/yourusername/convnext-earthquake-precursor/releases/download/v1.0/convnext_loeo_best.pth',
+        'url': 'https://github.com/ctrd3r/convnext2/releases/download/v1.0/convnext_loeo_best.pth',
         'sha256': 'PLACEHOLDER_HASH',
         'size_mb': 115,
         'description': 'Best model from LOEO cross-validation (97.53% magnitude accuracy)'
     },
     'convnext_tiny_pretrained': {
-        'url': 'https://github.com/yourusername/convnext-earthquake-precursor/releases/download/v1.0/convnext_tiny_pretrained.pth',
+        'url': 'https://github.com/ctrd3r/convnext2/releases/download/v1.0/convnext_tiny_pretrained.pth',
         'sha256': 'PLACEHOLDER_HASH',
         'size_mb': 115,
         'description': 'ConvNeXt-Tiny pretrained on earthquake spectrograms'

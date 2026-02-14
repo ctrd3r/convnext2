@@ -40,7 +40,7 @@ setup(
     description="ConvNeXt-based earthquake precursor detection from geomagnetic spectrograms",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/convnext-earthquake-precursor",
+    url="https://github.com/ctrd3r/convnext2",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",

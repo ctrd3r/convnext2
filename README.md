@@ -46,7 +46,7 @@ Multi-Task Heads
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/convnext-earthquake-precursor.git
+git clone https://github.com/ctrd3r/convnext2.git
 cd convnext-earthquake-precursor
 
 # Create virtual environment
