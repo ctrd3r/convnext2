@@ -1,0 +1,16 @@
+{
+  "azimuth": {
+    "accuracy": 69.29721511793124,
+    "random_baseline": 11.11111111111111,
+    "improvement_factor": 6.236749360613812,
+    "estimated_mcc": 0.6943014345495645,
+    "estimated_kappa": 0.6545936700767266
+  },
+  "magnitude": {
+    "accuracy": 97.5260395945818,
+    "random_baseline": 25.0,
+    "improvement_factor": 3.901041583783272,
+    "estimated_mcc": 1.0,
+    "estimated_kappa": 0.9670138612610907
+  }
+}
