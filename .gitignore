@@ -83,7 +83,6 @@ Thumbs.db
 # Project specific
 data/
 experiments/
-loeo_results/
 *.pth
 *.pt
 !models/README.md
